@@ -1,6 +1,3 @@
-select *
-from banking_txns;
-
 ## monthly income vs spend
 
 select
