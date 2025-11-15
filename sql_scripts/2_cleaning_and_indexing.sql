@@ -21,3 +21,18 @@ SET Fraud_Flag = CASE
 WHEN Fraud_Flag IN ('Yes') THEN 1 ELSE 0
 END;
 
+UPDATE banking_txns
+SET Discount_Applied = CASE
+WHEN Discount_Applied IN ('True') THEN 1 ELSE 0
+END;
+
+## indexing
+
+CREATE INDEX idx_txn_date ON banking_txns (Txn_Date);
+CREATE INDEX idx_city ON banking_txns (City);
+CREATE INDEX idx_payment_method ON banking_txns (Payment_Method);
+CREATE INDEX idx_category ON banking_txns (Category);
+CREATE INDEX idx_acct_number ON banking_txns (Acct_Number);
+
+select *
+from banking_txns;
