@@ -41,8 +41,6 @@ select *
 from banking_txns
 limit 25;
 
-## cleaning & indexing
-
 
 
 
